@@ -1,0 +1,48 @@
+/* styles.module.css */
+
+/* Scoped root styles */
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgba(196, 196, 186, 0.791);
+  --accent-color: rgb(255, 255, 255);
+  --font-stack: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+/* Scoped body styles */
+.body {
+  overflow: scroll;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: var(--font-stack);
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Scoped header styles */
+.h2,
+.h3 {
+  text-align: center;
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-color: var(--secondary-color);
+  font-family: var(--font-stack);
+}
+
+/* Scoped paragraph styles */
+.p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Scoped link styles */
+.a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.a:hover {
+  color: var(--secondary-color);
+}

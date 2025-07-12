@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll behavior */
+.scrollbar {
+  scroll-behavior: smooth;
+}
+
+/* Styling for the scrollbar track */
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 4vh;
+  background: #ffffff24;
+}
+
+/* Styling for the scrollbar thumb */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #ffffff57;
+  border-radius: 100vh;
+}
+
+/* Hide scrollbar when there's no overflow */
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #00dbf8;
+}
+
+/* Root element styling */
+:root {
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
+  /* Prevent vertical overflow by default */
+}
+
+/* Body element styling */
+.body {
+  height: 92.7%;
+}
+
+/* Additional layout styling */
+.settings {
+  top: 7.2%;
+}
+
+@media screen and (max-width: 800px) {
+  .chatscreen {
+    top: 0%;
+  }
+
+  /* Prevent scrollbar from appearing unless there's overflow */
+  .scrollbar {
+    overflow-y: auto;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Hide the scrollbar by default */
+  }
+
+  /* Show the scrollbar only when there's overflow */
+  .scrollbar:hover::-webkit-scrollbar {
+    display: block;
+    /* Show scrollbar on hover if needed */
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+}
